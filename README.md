@@ -3,7 +3,7 @@
 ConFEM2D is ....
 
 ### It is based on:
-	ConFEM (U Haussler-Combe, PYTHON 2)
+	ConFem (U Haussler-Combe, PYTHON 2)
 	STAP (KJ Bathe, FORTRAN IV)
 ### It includes:
 * Basic element types

@@ -34,7 +34,7 @@ This table presents possible combinations between element and material types:
 * *Gmsh4.0* as finite element mesh generator. 
 * or *pygmsh* as Python interface for Gmsh
 
-#### The documentation is available [here]() in PDF format.
+#### The documentation is available [here](https://github.com/DuongDoNgoc/ConFEM2D/blob/master/doc/ConFEM2D.pdf) in PDF format.
 
 ### Requirements
 	Python 2.7

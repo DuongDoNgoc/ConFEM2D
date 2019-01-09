@@ -1,9 +1,9 @@
-﻿# ConFEM2D - a finite element solver focus on reinforcement concrete 2D structures
+﻿# ConFEM2D - a finite element program specified in calculation of 2D reinforced concrete structures
 
-ConFEM2D is ....
+ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete structures. Its concrete material types uses the material library of the ConFem software written by prof. Ulrich Haussler-Combe, while its reinforcement material types are implemented based on elastoplastic Mises behavior. The input finite element mesh is prepared by external mesh generator Gmsh4.0.
 
 ### It is based on:
-	ConFEM (U Haussler-Combe, PYTHON 2)
+	ConFem (U Haussler-Combe, PYTHON 2)
 	STAP (KJ Bathe, FORTRAN IV)
 ### It includes:
 * Basic element types
@@ -34,7 +34,7 @@ This table presents possible combinations between element and material types:
 * *Gmsh4.0* as finite element mesh generator. 
 * or *pygmsh* as Python interface for Gmsh
 
-#### The documentation is available [here]() in PDF format.
+#### The documentation is available [here](https://github.com/DuongDoNgoc/ConFEM2D/blob/master/doc/ConFEM2D.pdf) in PDF format.
 
 ### Requirements
 	Python 2.7

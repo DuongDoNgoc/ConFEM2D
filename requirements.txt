@@ -1,0 +1,7 @@
+Python 2.7
+numpy >= 1.14
+scipy >= 1.1.0
+matplotlib >= 2.2
+scikit-umfpack >= 0.3.2
+pywin32 >= 224
+wheel >= 0.32

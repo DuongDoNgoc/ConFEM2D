@@ -1,0 +1,49 @@
+The section keyword *STEP has no own data lines, but has own keywords which are currently the following:
+*STATIC, (RIKS) : quasi-static computation.
+  delta_t, t, s
+	RIKS: Arc-length method is used for step size of load incrementation
+	 with: delta_t = time step for load incrementation (pseudo time)
+		   t= time target
+		   s= prescribed scalar length of displacement vector-nodal displacements-in case of Arc length method
+
+Default method for solution of systems fof equations is the Newton-Raphson method in case that a line with*SOLUTION TECHNIQUE is not given.
+*SOLUTION TECHNIQUE, TYPE=MODIFIED-NR/QUASI-NEWTON
+Linear problem are treated like nonlinear problems but will generally stop after the first equilibrium iteration.
+
+The step keyword *CONTROLS has as option:
+*CONTROLS, PARAMETERS=FIELD
+  r_tol= scalar tolerance for equilibrium iteration. A default value is used for r_tol in case that it is not given.
+*CONTROLS, PARAMETERS=TIME INCREMENTATION
+  n_iter= maximum number of equilibrium iterations with a time increment or loading step.
+
+The step keyword *AMPLITUDE is used to define (pseudo-)time dependent boundary conditions or loadings
+*AMPLITUDE, NAME=<name>
+  t0, f0, t1, f1, ...., tn, fn
+with: t0= time of initial supporting point
+	  f0= value of initial supporting point
+	  ti= time of further supporting point
+	  fi= value of initial supporting point
+
+Option and data of *BOUNDARY
+*BOUNDARY, AMPLITUDE=<name>, OP=NEW
+ The following lines describe as data: i, index_1, index_n, ui
+with: index_i= indicates a nodal dof, i= number of node to be constrained
+	  index_1= index of first dof to be constrained
+	  index_n= index of last dof to be constrained
+	  ui= value of prescribed displacement of dofs defined
+The value of ui multiplied by the current value of the function defined with *AMPLITUDE
+
+Option and data of *CLOAD
+*CLOAD, AMPLITUDE=<name>
+The following data lines describe as data: i, index, P
+with: i= number of loaded node
+	  index= index of dof to be loaded
+	  P= value of prescribed concentrated load of dof.
+
+Option and data of *DLOAD
+*DLOAD, AMPLITUDE=<name>
+The following data lines describie as data: <Element set name>, index, p
+with: <name>= name of set of loaded elements
+	  index= index of dof to be loaded
+	  p= value of prescribed distributed load of dofs
+A distributed loading is distributed over a length for element types Beam, Truss, over an area for elementtype Plate,SB3 and over a volume for the element type Cube, Shell

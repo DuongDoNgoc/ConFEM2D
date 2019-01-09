@@ -1,0 +1,8 @@
+ConFem:  C:/Users/regga/Desktop/ConFEM2D/examples/ex1/ex1
+symmetric system True
+0 step starts NR
+1 0 1.0 0.0 0 0.0 0.0 1.0
+1 0 1.0 1.0 1 1.1598248125546767e-13 0.013705929121048994 1.0
+Element Data written 1.0 1.0
+Nodal Data written 1.0 1.0
+1.08200001717

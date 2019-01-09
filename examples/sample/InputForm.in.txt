@@ -1,0 +1,40 @@
+*HEADING
+Project_name
+*NODE
+
+
+******************************************************************
+*MATERIAL, NAME=MAT1
+*DENSITY
+ 2.5e-3
+*ELASTIC
+ 33000, 0.2
+******************************************************************
+*SHELL SECTION, ELSET=Dalle, MATERIAL=MAT1
+ 0.25
+*****
+*ELEMENT, TYPE=SB3, ELSET=Dalle
+
+******************************************************************
+*SHELL SECTION, ELSET=Loading, MATERIAL=MAT1
+ 0.25
+****
+*ELEMENT, TYPE=SB3, ELSET=4Columns
+
+******************************************************************
+*STEP
+*STATIC
+   1.0,   1.0
+*BOUNDARY, AMPLITUDE=AMPL0
+
+*AMPLITUDE, NAME=AMPL0
+ 0.0, 0.0,  1.0, 1.0
+*DLOAD, AMPLITUDE=AMPL0
+  Loading,   3,   -0.020  
+*EL FILE, FREQUENCY=1
+S
+E
+*NODE FILE, FREQUENCY=1
+U
+*END STEP
+************************************************************

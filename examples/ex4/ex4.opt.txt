@@ -1,0 +1,2 @@
+writeNodes,1,3,b-t,15,3,b-t,30,3,b-t,45,3,b-t,
+reinforcementDesign, 435, 17.0, 0.3, 0.25

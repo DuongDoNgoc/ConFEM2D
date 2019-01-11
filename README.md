@@ -1,6 +1,7 @@
-﻿# ConFEM2D - a finite element program specified in calculation of 2D reinforced concrete structures
+﻿# ConFEM2D - a finite element program specialized in calculation of 2D reinforced concrete structures
 
-ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete structures. Its concrete material types uses the material library of the ConFem software written by prof. Ulrich Haussler-Combe, while its reinforcement material types are implemented based on elastoplastic Mises behavior. The input finite element mesh is prepared by external mesh generator Gmsh4.0.
+ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete structures. With the problem of determining the ultimate strength of a structure, ConFEM2D gives reliable result compared to other commercial FE softwares like *Ansys, Atena*.
+Its concrete material types uses the material library of the ConFem software written by prof. Ulrich Haussler-Combe, while its reinforcement material types are implemented based on elastoplastic Mises behavior. User can choice solver using a iterative method among three following methods : Newton-Raphson, BFGS and Arc-length. The input finite element mesh is prepared by external mesh generator Gmsh4.0.
 
 ### It is based on:
 	ConFem (U Haussler-Combe, PYTHON 2)
@@ -18,7 +19,7 @@ ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete stru
 * Multiple material types
 	* Linear elastic behavior
 	* Elastic behavior with limited strength (used for modeling cracked concrete)
-	* Iso-damage behavior for progressive reducing stiffness after concrete's crack initializing
+	* Isodamage behavior for progressive reducing stiffness after concrete's crack initializing
 	* Simplified elastoplastic behavior for modeling of slab element
 	* Mises's elastoplastic behavior for modeling of reinforcement
 	* Nonlinear bond
@@ -28,16 +29,16 @@ ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete stru
 	* Arc length method
 
 This table presents possible combinations between element and material types:
-
+![tab_combination_elem-mat](https://user-images.githubusercontent.com/46455765/51026768-9b359f00-158f-11e9-91f8-68a1c35e7341.PNG)
 
 ### It works with:
-* *Gmsh4.0* as finite element mesh generator. 
+* *Gmsh4.0* as finite element mesh generator.
 * or *pygmsh* as Python interface for Gmsh
 
 #### The documentation is available [here](https://github.com/DuongDoNgoc/ConFEM2D/blob/master/doc/ConFEM2D.pdf) in PDF format.
 
 ### Requirements
-	Python 2.7
+	Python == 2.7
 	numpy >= 1.14
 	scipy >= 1.1.0
 	matplotlib >= 2.2

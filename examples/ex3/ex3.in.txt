@@ -87,7 +87,7 @@ simple slab convergence study and nonlinear
 *CONTROLS, PARAMETERS=TIME INCREMENTATION
   20
 *STATIC
-   0.1,   2.0, 0.00025
+   0.005,   2.0, 0.00025
 **   0.2,   1.0
 *AMPLITUDE, NAME=AMPL0
  0.0, 0.0,  1.0, 1.0
@@ -117,10 +117,10 @@ simple slab convergence study and nonlinear
    25,    1, 2,  0.
    25,    4, 4,  0.
    25,    5, 5,  0.
-**   25,    3, 3,  -0.005
+   25,    3, 3,  -0.006
 ** DLOAD is volume load for SH4, a given surface load has to be divided by thickness for the following load value
-*DLOAD, AMPLITUDE=AMPL0
-  EL1,   3,   -0.064
+**DLOAD, AMPLITUDE=AMPL0
+**  EL1,   3,   -0.064
 *EL FILE, FREQUENCY=1.0
 S
 E

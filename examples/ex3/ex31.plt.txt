@@ -1,0 +1,5 @@
+ScaleElementData,   0.90
+ScaleNodalData,   1.0
+ScalePstrainData,   300.
+PlotElements3D, 1
+

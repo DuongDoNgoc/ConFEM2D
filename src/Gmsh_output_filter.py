@@ -1,7 +1,7 @@
 """This module work as a filter providing compatitble ConFEM's inputdata from the .msh file resulted from Gmsh4.0"""
 
 from __future__ import print_function
-f1 = open('C:/Users/regga/Desktop/testcode/slab.msh', 'r')   # edit the path to your .msh file
+f1 = open('C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_withOpenings.msh', 'r')   # edit the path to your .msh file
 list_f1 = list(f1)
 # Preallocate memories
 PhysicalEntity = []
@@ -52,7 +52,7 @@ class PhysicalEntity(object):
         self.name = name
 for i in xrange(MeshFormat["PhysicalNames"][0]+2, MeshFormat["PhysicalNames"][1]):
     line = list_f1[i].split(" ")
-    PhysicalNames_List += [PhysicalEntity(int(line[0]), int(line[1]), line[2].strip())]
+    PhysicalNames_List += [PhysicalEntity(int(line[0]), int(line[1]), line[2].strip().replace('"',''))]
 
 # Loop in Entities
 Entities_List = []
@@ -153,6 +153,7 @@ class Element(object):
         self.typeEle = int(typeEle)
         self.tag = int(tag)
         self.InzList = InzList
+
 ElemEntities = []     # this list specifies the number of lines that contain ElemEntities (not Node coord)
 count = count_start
 while count < count_end:
@@ -194,14 +195,14 @@ for physicalname in PhysicalNames_List:
 for key_ in ElemOut.keys():
     print("\nPhysicalName:%s" %(key_))
     for Elem in ElemOut[key_][1]:
-        print("ElemTag:%s TypeEle:%s InzList:%s" %(Elem.tag, Elem.typeEle,Elem.InzList))
+        print("ElemTag:%s TypeEle:%s InzList:%s" %(Elem.tag, Elem.typeEle, Elem.InzList))
 del ElOut,Enti,EntiTag,ID,Name,entiTag_,i,key_,leng_,physicalname   # delete variables not-used anymore
 
 # Write to text file
 
-with open("C:/Users/regga/Desktop/slab_out.txt", "w") as outF:
+with open("C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_output.txt", "w") as outF:
     outF.write("*HEADING\n")
-    outF.write("nonlinear slab analysis\n")
+    outF.write("Wall with openings\n")
     # write NODE section
     outF.write("*NODE\n")
     for NODE in NodeList:
@@ -209,8 +210,8 @@ with open("C:/Users/regga/Desktop/slab_out.txt", "w") as outF:
         outF.write(line)
     outF.write("\n******************************************************************\n") #end section
     # write Elem section
-with open("C:/Users/regga/Desktop/slab_out.txt", "a") as outF:
-    for key_ in ElemOut.keys():
+with open("C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_output.txt", "a") as outF:
+    for key_ in ElemOut:
         typeElem_ = ElemOut[key_][1][0].typeEle
         outF.write("*ELEMENT, TYPE=%s, ELSET=%s\n" %(typeElem_,key_))
         for Elem in ElemOut[key_][1]:
@@ -238,11 +239,10 @@ def BoundaryGenerator(ElList, prescribedDof, value, file=None):
                     else:
                         print('%4d, %s, %s, %s' % (node, prescribedDof[i],prescribedDof[i], value), file=file)  # print out to output file
 
-
 """ To add boundary condition corresponding to PhysicalName, manually add/edit the script below
 """
 if not __name__=="__main__":
-    outputfile = open("C:/Users/regga/Desktop/slab_out.txt", "a")
+    outputfile = open("C:/Users/regga/Documents/Gmsh4.0/test_coinciding_mesh/mesh_output.txt", "a")
     #outputfile = None
 
     n = 1
@@ -257,3 +257,32 @@ if not __name__=="__main__":
     else: print('\nBoundaryList of PhysicalName=%s' % ElemOut.keys()[n], file=outputfile)
     BoundaryGenerator(ElList=targDict[1], prescribedDof=(3,5), value=0.0, file=outputfile)
 
+""" In case if you want duplicate elements(by keeping the same InzList) in a physical name, just add a new physical name 
+ and add an increment number of element tag"""
+
+def DuplicateElems(ElemOut, ori_PhysicalName, new_PhysicalName, increElemTag, file):
+    """
+    :param ori_PhysicalName: format = list of strings
+    :param new_PhysicalName: format = list of strings
+    :param increElemTag: format = integer
+    :return:
+    """
+    with open(file,"a") as outF:
+        for index,name in enumerate(ori_PhysicalName):
+            if name in ElemOut:
+                typeElem_ = ElemOut[name][1][0].typeEle
+                outF.write("*ELEMENT, TYPE=%s, ELSET=%s\n" % (typeElem_, new_PhysicalName[index]))
+                for Elem in ElemOut[name][1]:
+                    line_p1 = "%s, " %(Elem.tag + increElemTag)
+                    outF.write(line_p1)
+                    print(*Elem.InzList, sep=', ', end='\n', file=outF)
+                outF.write("\n******************************************************************\n")
+
+if __name__ == "__main__":
+    outputfile = "C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_output.txt"
+    ori_names = ['O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'O9', 'O10', 'O11', 'O12', 'O13', 'O14', 'O15', 'O16', 'O17',
+                 'O18', 'O19', 'O20', 'O21', 'O22', 'O23', 'O24', 'O25', 'O26', 'O27']
+    new_names1 = [string+'_REX' for string in ori_names]
+    DuplicateElems(ElemOut, ori_names, new_names1, 10000, outputfile)
+    new_names2 = [string+'_REY' for string in ori_names]
+    DuplicateElems(ElemOut, ori_names, new_names2, 10000, outputfile)

@@ -1,10 +1,10 @@
 ﻿# ConFEM2D - a finite element program specialized in calculation of 2D reinforced concrete structures
 
 ConFEM2D mainly focuses on the nonlinear behavior of 2D reinforced concrete structures. With the problem of determining the ultimate strength of a structure, ConFEM2D gives reliable result compared to other commercial FE softwares like *Ansys, Atena*.
-Its concrete material types uses the material library of the ConFem software written by prof. Ulrich Haussler-Combe, while its reinforcement material types are implemented based on elastoplastic Mises behavior. User can choice solver using a iterative method among three following methods : Newton-Raphson, BFGS and Arc-length. The input finite element mesh is prepared by external mesh generator Gmsh4.0.
+Its concrete material types uses the material library of the ConFem software written by prof. Ulrich Haussler-Combe, while its reinforcement material types are implemented based on elastoplastic Mises behavior. User can choice solver using a iterative method among three following methods : Newton-Raphson, BFGS and Arc-length. The input finite element mesh is prepared by means of a external mesh generator Gmsh4.0.
 
 ### It is based on:
-	ConFem (U Haussler-Combe, PYTHON 2)
+	ConFem (U Haussler-Combe, PYTHON 2.7)
 	STAP (KJ Bathe, FORTRAN IV)
 ### It includes:
 * Basic element types
@@ -28,14 +28,15 @@ Its concrete material types uses the material library of the ConFem software wri
 	* Quasi-Newton BFGS method
 	* Arc length method
 
-This table presents possible combinations between element and material types:
-![tab_combination_elem-mat](https://user-images.githubusercontent.com/46455765/51026768-9b359f00-158f-11e9-91f8-68a1c35e7341.PNG)
+The figure below shows an example:
+
+![example](https://user-images.githubusercontent.com/46455765/51641015-63523280-1f65-11e9-872e-9ab1356f07ab.PNG)
 
 ### It works with:
 * *Gmsh4.0* as finite element mesh generator.
 * or *pygmsh* as Python interface for Gmsh
 
-#### The documentation is available [here](https://github.com/DuongDoNgoc/ConFEM2D/blob/master/doc/ConFEM2D.pdf) in PDF format.
+##### The documentation is available [here](https://github.com/DuongDoNgoc/ConFEM2D/blob/master/doc/ConFEM2D.pdf) in PDF format. (_not completed yet_)
 
 ### Requirements
 	Python == 2.7

@@ -499,7 +499,7 @@ class ConFem:
 
 if __name__ == "__main__":
     LogName = "C:/Users/regga/Desktop/ConFEM2D/examples/ex1/LogFiles"  # to log temporary data
-    Name = "C:/Users/regga/Desktop/ConFEM2D/examples/ex1/ex1"
+    Name = "C:/Users/regga/Desktop/ConFEM2D/examples/ex2/ex2"
     ConFem_ = ConFem()
     if Linalg_possible:
         LinAlgFlag = True
@@ -507,6 +507,6 @@ if __name__ == "__main__":
         LinAlgFlag = False
     #LinAlgFlag = False  # intentionally
     Restart = False
-    Plot = True
+    Plot = False
     RC = ConFem_.Run(Name, LogName, Plot, LinAlgFlag, Restart, "elemout")  # flags for plot, system of equation solution, restart
     print RC

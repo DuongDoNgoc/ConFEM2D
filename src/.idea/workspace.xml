@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="827df719-84d2-445f-aab7-57525a61a055" name="Default Changelist" comment="" />
+    <list default="true" id="827df719-84d2-445f-aab7-57525a61a055" name="Default Changelist" comment="Added new function DuplicateElems, and optimized some previous codes">
+      <change beforePath="$PROJECT_DIR$/../examples/ex5/ex5.in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/ex5/ex5.in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConFEM2D_InOut.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConFEM2D_InOut.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConFEM2D_PostPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConFEM2D_PostPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConFEM2D_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConFEM2D_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gmsh_output_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gmsh_output_filter.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,40 +16,85 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ConFEM2D_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#35#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ConFEM2D_main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="572">
+                  <caret line="501" column="61" lean-forward="true" selection-start-line="501" selection-start-column="61" selection-end-line="501" selection-end-column="61" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ConFEM2D_InOut.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2465">
+                  <caret line="1487" column="51" selection-start-line="1487" selection-start-column="51" selection-end-line="1487" selection-end-column="51" />
+                  <folding>
+                    <element signature="e#55#79#0" expanded="true" />
+                    <element signature="e#1081#2074#0" />
+                    <element signature="e#2151#4561#0" />
+                    <element signature="e#4709#5419#0" />
+                    <element signature="e#5470#9441#0" />
+                    <element signature="e#9515#49888#0" />
+                    <element signature="e#49980#51715#0" />
+                    <element signature="e#51846#56127#0" />
+                    <element signature="e#56203#66824#0" />
+                    <element signature="e#66883#67562#0" />
+                    <element signature="e#67590#74362#0" />
+                    <element signature="e#74408#78337#0" />
+                    <element signature="e#78419#89575#0" />
+                    <element signature="e#89639#96909#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ConFEM2D_PostPlot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ConFemInOut.py" />
-        <option value="$PROJECT_DIR$/ConFEM2D_main.py" />
         <option value="$PROJECT_DIR$/ConFEM2D_Basics.py" />
         <option value="$PROJECT_DIR$/lib_Mat.py" />
         <option value="$PROJECT_DIR$/ConFEM2D_Steps.py" />
         <option value="$PROJECT_DIR$/libMatC.py" />
         <option value="$PROJECT_DIR$/libElemC.py" />
+        <option value="$PROJECT_DIR$/Gmsh_output_filter.py" />
         <option value="$PROJECT_DIR$/ConFEM2D_InOut.py" />
+        <option value="$PROJECT_DIR$/ConFEM2D_PostPlot.py" />
+        <option value="$PROJECT_DIR$/ConFEM2D_main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="-7" />
+    <option name="width" value="1033" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -62,6 +114,9 @@
       </pane>
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PythonApps/Cython_tutorial" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -74,7 +129,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.ConFEM2D_main">
+    <configuration name="ConFEM2D_PostPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConFEM2D_PostPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ConFEM2D_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="src" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,9 +172,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Gmsh_output_filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Gmsh_output_filter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ConFEM2D_main" />
+        <item itemvalue="Python.ConFEM2D_PostPlot" />
+        <item itemvalue="Python.Gmsh_output_filter" />
       </list>
     </recent_temporary>
   </component>
@@ -113,53 +212,198 @@
       <option name="presentableId" value="Default" />
       <updated>1547022298007</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed loading input from distributed load to concentrated load">
+      <created>1547724314773</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724314773</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed monitoring Dof of node">
+      <created>1547724418474</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724418474</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added src/Log_file.txt">
+      <created>1547724465159</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724465159</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added new function DuplicateElems, and optimized some previous codes">
+      <created>1547724566042</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724566042</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added ex5's gmsh input : walls with openings">
+      <created>1547724733874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724733874</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added results + images">
+      <created>1547724836395</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724836395</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14910433" />
-      <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" visible="true" weight="0.14910433" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48320693" visible="true" weight="0.14910433" />
+      <window_info id="Structure" order="1" sideWeight="0.5167931" side_tool="true" visible="true" weight="0.14910433" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" weight="0.2979415" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50105375" side_tool="true" weight="0.53846157" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed loading input from distributed load to concentrated load" />
+    <MESSAGE value="Changed monitoring Dof of node" />
+    <MESSAGE value="Added src/Log_file.txt" />
+    <MESSAGE value="Added new function DuplicateElems, and optimized some previous codes" />
+    <MESSAGE value="Added ex5's gmsh input : walls with openings" />
+    <MESSAGE value="Added results + images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added results + images" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ConFEM2D_Basics.py</url>
+          <line>289</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib_Elem.py</url>
+          <line>1025</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ConFEM2D_PostPlot.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ConFEM2D_InOut.py</url>
+          <line>1485</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="name" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>name</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ElemOut.keys()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ElemOut</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeElem_</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key_</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ID</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ElemEntities</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ElList</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>line[2].strip().replace('&quot;','')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line[2].strip()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>raw(line[2].strip())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line[2]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ConFEM2D_Basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#686#696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib_Elem.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ConSimFem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConFEM2D_PostPlot.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ConFEM2D_Steps.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -196,32 +440,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib_Mat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="8041">
+          <caret line="962" column="12" selection-start-line="962" selection-start-column="12" selection-end-line="962" selection-end-column="12" />
           <folding>
             <element signature="e#685#716#0" expanded="true" />
+            <element signature="e#24262#53165#0" />
+            <element signature="e#24700#28201#0" />
+            <element signature="e#28305#50612#0" />
+            <element signature="e#28796#29858#0" />
+            <element signature="e#31375#32795#0" />
+            <element signature="e#50728#52391#0" />
+            <element signature="e#52453#53165#0" />
+            <element signature="e#54467#57737#0" />
+            <element signature="e#57831#59744#0" />
+            <element signature="e#59798#60067#0" />
+            <element signature="e#60204#61431#0" />
+            <element signature="e#61495#61811#0" />
+            <element signature="e#69223#69712#0" />
+            <element signature="e#69759#72909#0" />
+            <element signature="e#75256#76106#0" />
+            <element signature="e#76258#81292#0" />
+            <element signature="e#81341#82066#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log_file.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="1090" column="22" lean-forward="true" selection-start-line="1090" selection-start-column="22" selection-end-line="1090" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib_Elem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="1017" column="32" lean-forward="true" selection-start-line="1017" selection-start-column="32" selection-end-line="1017" selection-end-column="32" />
+          <folding>
+            <element signature="e#48960#51394#0" />
+            <element signature="e#64894#69039#0" />
+            <element signature="e#69087#69995#0" />
+            <element signature="e#70043#70542#0" />
+            <element signature="e#70582#75175#0" />
+            <element signature="e#75214#76090#0" />
+            <element signature="e#76134#81274#0" />
+            <element signature="e#81376#82083#0" />
+            <element signature="e#82122#82370#0" />
+            <element signature="e#82409#84480#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConFEM2D_Basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="289" selection-start-line="289" selection-end-line="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gmsh_output_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+          <folding>
+            <element signature="e#11914#12709#0" />
+            <element signature="e#12840#13278#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ConFEM2D_InOut.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="1626" column="33" lean-forward="true" selection-start-line="1626" selection-start-column="33" selection-end-line="1626" selection-end-column="33" />
+        <state relative-caret-position="2465">
+          <caret line="1487" column="51" selection-start-line="1487" selection-start-column="51" selection-end-line="1487" selection-end-column="51" />
           <folding>
             <element signature="e#55#79#0" expanded="true" />
-            <element signature="e#116195#117198#0" />
+            <element signature="e#1081#2074#0" />
+            <element signature="e#2151#4561#0" />
+            <element signature="e#4709#5419#0" />
+            <element signature="e#5470#9441#0" />
+            <element signature="e#9515#49888#0" />
+            <element signature="e#49980#51715#0" />
+            <element signature="e#51846#56127#0" />
+            <element signature="e#56203#66824#0" />
+            <element signature="e#66883#67562#0" />
+            <element signature="e#67590#74362#0" />
+            <element signature="e#74408#78337#0" />
+            <element signature="e#78419#89575#0" />
+            <element signature="e#89639#96909#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ConFEM2D_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#35#56#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="572">
+          <caret line="501" column="61" lean-forward="true" selection-start-line="501" selection-start-column="61" selection-end-line="501" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConFEM2D_PostPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
         </state>
       </provider>
     </entry>

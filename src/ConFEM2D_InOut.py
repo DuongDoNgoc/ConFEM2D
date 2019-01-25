@@ -1482,10 +1482,12 @@ def PostNode( ElList, NodeList, VecU, SN, mod_Z_limit, PE3DFlag):
             plot(xN,yN, 'b--')
             if (len(xP)+len(yP))>0:
                 plot(xP,yP, 'b-',linewidth=LiWiCrv)
-                plot(xP,yP, 'o', color=Colors[ElSets[Set]])
+                #plot(xP,yP, 'o', color=Colors[ElSets[Set]])
+                plot(xP,yP, 'o', color='red')
             if len(xS)>0:
                 plot(xS,yS, 'b-',linewidth=LiWiCrv)
-                plot(xS,yS, 'o', color=Colors[ElSets[Set]])
+                #plot(xS,yS, 'o', color=Colors[ElSets[Set]])
+                plot(xS,yS, 'o', 'blue')
         grid()
         title('Deformed mesh final step (scale '+'%7.4f'%(scale)+')')
         axis('equal')

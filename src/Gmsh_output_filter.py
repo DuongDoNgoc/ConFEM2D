@@ -220,43 +220,6 @@ with open("C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_output.txt", 
             print(*Elem.InzList, sep=', ', end='\n', file=outF)
         outF.write("\n******************************************************************\n")
 
-# Sort nodes in elements to a boundary list
-def BoundaryGenerator(ElList, prescribedDof, value, file=None):
-    """
-    :param ElList: format : [list of Elem objects that have attributes: Elem.tag, Elem.typeEle, Elem.InzList]
-    :param prescribedDof:
-    :param value:
-    :return: print out list of nodes, corresponding prescribed Dof, corresponding value
-    """
-    NodeList = []
-    for elem in ElList:
-        for node in elem.InzList:
-            if not node in NodeList:
-                NodeList += [node]
-                for i in xrange(len(prescribedDof)):
-                    if file == None:
-                        print('%4d, %s, %s, %s' % (node, prescribedDof[i],prescribedDof[i], value))  # print out to console
-                    else:
-                        print('%4d, %s, %s, %s' % (node, prescribedDof[i],prescribedDof[i], value), file=file)  # print out to output file
-
-""" To add boundary condition corresponding to PhysicalName, manually add/edit the script below
-"""
-if not __name__=="__main__":
-    outputfile = open("C:/Users/regga/Documents/Gmsh4.0/test_coinciding_mesh/mesh_output.txt", "a")
-    #outputfile = None
-
-    n = 1
-    targDict = ElemOut[ElemOut.keys()[n]]
-    if outputfile ==None: print('\nBoundaryList of PhysicalName=%s' % ElemOut.keys()[n])
-    else: print('\nBoundaryList of PhysicalName=%s' % ElemOut.keys()[n], file=outputfile)
-    BoundaryGenerator(ElList=targDict[1], prescribedDof=(3,4), value=0.0, file=outputfile)
-
-    n = 3
-    targDict = ElemOut[ElemOut.keys()[n]]
-    if outputfile ==None: print('\nBoundaryList of PhysicalName=%s' % ElemOut.keys()[n])
-    else: print('\nBoundaryList of PhysicalName=%s' % ElemOut.keys()[n], file=outputfile)
-    BoundaryGenerator(ElList=targDict[1], prescribedDof=(3,5), value=0.0, file=outputfile)
-
 """ In case if you want duplicate elements(by keeping the same InzList) in a physical name, just add a new physical name 
  and add an increment number of element tag"""
 
@@ -285,4 +248,37 @@ if __name__ == "__main__":
     new_names1 = [string+'_REX' for string in ori_names]
     DuplicateElems(ElemOut, ori_names, new_names1, 10000, outputfile)
     new_names2 = [string+'_REY' for string in ori_names]
-    DuplicateElems(ElemOut, ori_names, new_names2, 10000, outputfile)
+    DuplicateElems(ElemOut, ori_names, new_names2, 20000, outputfile)
+    new_names3 = [string for string in ori_names]
+    DuplicateElems(ElemOut, ori_names, new_names3, 0, outputfile)
+
+# Sort nodes in elements to a boundary list
+def BoundaryGenerator(ElList, prescribedDof, value, file=None):
+    """
+    :param ElList: format : [list of Elem objects that have attributes: Elem.tag, Elem.typeEle, Elem.InzList]
+    :param prescribedDof: format = tuple
+    :param value:
+    :return: print out list of nodes, corresponding prescribed Dof, corresponding value
+    """
+    NodeList = []
+    for elem in ElList:
+        for node in elem.InzList:
+            if not node in NodeList:
+                NodeList += [node]
+                for i in xrange(len(prescribedDof)):
+                    if file == None:
+                        print('%4d, %s, %s, %s' % (node, prescribedDof[i],prescribedDof[i], value))  # print out to console
+                    else:
+                        print('%4d, %s, %s, %s' % (node, prescribedDof[i],prescribedDof[i], value), file=file)  # print out to output file
+
+""" To add boundary condition corresponding to PhysicalName, manually add/edit the script below
+"""
+if __name__=="__main__":
+    outputfile = open("C:/Users/regga/Documents/Gmsh4.0/Wall_withOpenings/Wall_output.txt", "a")
+    #outputfile = None
+
+    physic_name = 'support'
+    targDict = ElemOut[physic_name]
+    if outputfile ==None: print('\nBoundaryList of PhysicalName=%s' % physic_name)
+    else: print('\nBoundaryList of PhysicalName=%s' % physic_name, file=outputfile)
+    BoundaryGenerator(ElList=targDict[1], prescribedDof=(1,2), value=0.0, file=outputfile)
